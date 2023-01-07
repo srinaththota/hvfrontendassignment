@@ -8,7 +8,9 @@ const RegisterScreen = ({ navigation, route, options, back })=>{
       const userInputHandler = (enteredtext) =>{
           console.log(enteredtext)
       }
-
+      const emailInputHandler = (enteredtext) =>{
+          console.log(enteredtext)
+      }
       const userPasswordHandler = (enteredtext) =>{
         console.log(enteredtext)
     }
@@ -17,6 +19,7 @@ const RegisterScreen = ({ navigation, route, options, back })=>{
         <View style={styles.appContainer}>
         <View style={styles.inputContainer}>
           <TextInput style={styles.textInput} placeholder='username' onChangeText={userInputHandler} />
+          <TextInput style={styles.textInput} placeholder='email id' onChangeText={emailInputHandler} />
           <TextInput style={styles.textInput} placeholder='password' onChangeText={userPasswordHandler} />
           <View>
           <Button title='Register' onPress={submitHandler} />
@@ -42,7 +45,6 @@ const styles = StyleSheet.create({
       borderColor:'#cccccc',
       borderBottomWidth:1,
       marginBottom:6,
-      width:'70%',
       marginRight:8,
       padding:8
     },
