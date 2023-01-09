@@ -19,7 +19,7 @@ export const LoginAction=(username,password)=>{
             const data=JSON.stringify({ username: username,password: password })
                    
             try{
-             axios.post("http://localhost:8080/login",
+             axios.post('http://192.168.0.12:8080/login',
              data,config).then(response=>response).then((responseData)=>{
              console.log(responseData)
                     dispatch({

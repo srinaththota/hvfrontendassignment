@@ -30,8 +30,12 @@ const LoginScreen = ({ navigation, route, options, back })=>{
           <TextInput style={styles.textInput} placeholder='username' onChangeText={userInputHandler} />
           <TextInput style={styles.passwordInput} placeholder='password' onChangeText={psswordHandler} />
           <View style={styles.buttonContainer}>
+            <View style={styles.buttonStyle}>
           <Button title='Login' onPress={submitHandler} />
+          </View>
+          <View style={styles.buttonStyle}>
           <Button title='Register' onPress={navigateToRegister} />
+          </View>
           </View>
       </View>
     </View>  
@@ -66,6 +70,10 @@ const styles = StyleSheet.create({
         margin:15,
         padding:8
       },
+      buttonStyle:{
+        flex:1,
+        padding:3
+      }
   });
 
   
