@@ -6,7 +6,7 @@ const TabNavigator=()=>{
     return(
         
             <Tab.Navigator>
-            <Tab.Screen name="Products" component={Products} />
+            <Tab.Screen name="products" component={Products} />
             </Tab.Navigator>
         
     )

@@ -9,10 +9,10 @@ const Stack = createStackNavigator();
 const AppNavigator=()=>{
     
     return(<Stack.Navigator>
-      <Stack.Screen name="Products" component={TabNavigator} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Manage Profile" component={ManageProfile} />
       <Stack.Screen name="Register" component={RegisterScreen} />
+      <Stack.Screen name="Products" component={TabNavigator} />
     </Stack.Navigator>)
 }
 

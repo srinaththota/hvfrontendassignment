@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useDispatch } from 'react-redux' 
 import { View, TextInput, StyleSheet, Button } from "react-native";
-
+import { LoginAction } from "../store/actions/LoginAction"; 
 const LoginScreen = ({ navigation, route, options, back })=>{
 
     const [username,setUserName] = useState()
     const [password,setPassword] = useState()
 
+    const loginDispatch = useDispatch()
     const submitHandler = () =>{
-        console.log("check")
+        loginDispatch(LoginAction(username,password))
       }
     
       const userInputHandler = (enteredtext) =>{
